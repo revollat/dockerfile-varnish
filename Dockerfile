@@ -14,11 +14,11 @@ RUN apt-get install -q -y varnish
 
 ADD default.vcl /etc/varnish/vcl/default.vcl
 
-ENV VARNISH_BACKEND_PORT 80
-ENV VARNISH_BACKEND_IP 172.17.42.1
-ENV VARNISH_PORT 80
+#ENV VARNISH_BACKEND_PORT 80
+#ENV VARNISH_BACKEND_IP 172.17.42.1
+#ENV VARNISH_PORT 80
 
-EXPOSE 80
+EXPOSE 8888
 
 ADD start /start
 RUN chmod 0755 /start

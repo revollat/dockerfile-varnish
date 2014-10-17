@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Start varnish and log
-varnishd -f /etc/varnish/vcl/default.vcl -d -u varnish -g varnish -a 0.0.0.0:80
-varnishlog
+varnishd -f /etc/varnish/vcl/default.vcl -u varnish -g varnish -s malloc,256M -a 0.0.0.0:8888
+#varnishlog
